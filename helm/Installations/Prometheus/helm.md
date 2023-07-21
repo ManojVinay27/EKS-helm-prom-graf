@@ -7,13 +7,13 @@ Add helm repo:
 
 Update helm repo:
 -----------------
-      helm repo update
+    helm repo update
 
 Install prometheus:
 ------------------
-      helm install prometheus prometheus-community/prometheus
+    helm install prometheus prometheus-community/prometheus
 
 Expose Prometheus Service:
 -------------------------
-      kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-sample
+    kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-sample
   
