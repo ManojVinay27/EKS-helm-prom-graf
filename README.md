@@ -26,76 +26,76 @@ eksctl version
 
 Cluster creation:
 -----------------
-eksctl create cluster --name=eksdemo \
+	eksctl create cluster --name=eksdemo \
                  
-		  --region=ap-south-1 \
+			  --region=ap-south-1 \
                   
-		  --zones=ap-south-1a,ap-south-1b \
+			  --zones=ap-south-1a,ap-south-1b \
                   
-		  --without-nodegroup 
+			  --without-nodegroup 
 
 
 Add IAM providers:
 -----------------
 
-eksctl utils associate-iam-oidc-provider \
+	eksctl utils associate-iam-oidc-provider \
    
-    --region ap-south-1 \
+  	  --region ap-south-1 \
     
-    --cluster eksdemo \
+  	  --cluster eksdemo \
     
-    --approve
+  	  --approve
 
 Create cluster node group:
 -------------------------
 
 
-eksctl create nodegroup --cluster=eksdemo \
+	eksctl create nodegroup --cluster=eksdemo \
                   
-		   --region=ap-south-1 \
+			   --region=ap-south-1 \
                    
-		   --name=eksdemo-ng-public \
+			   --name=eksdemo-ng-public \
                    
-		   --node-type=t2.medium \
+		  	   --node-type=t2.medium \
                    
-		   --nodes=2 \
+			   --nodes=2 \
                    
-		   --nodes-min=2 \
+			   --nodes-min=2 \
                    
-		   --nodes-max=4 \
+			   --nodes-max=4 \
                    
-		   --node-volume-size=10 \
+		 	   --node-volume-size=10 \
                    
-		   --ssh-access \
+			   --ssh-access \
                    
-		   --ssh-public-key=new \     ####Replace this
+			   --ssh-public-key=new \     ####Replace this
                    
-		   --managed \
+			   --managed \
                    
-		   --asg-access \
+			   --asg-access \
                    
-		   --external-dns-access \
+			   --external-dns-access \
                    
-		   --full-ecr-access \
+			   --full-ecr-access \
                    
-		   --appmesh-access \
+			   --appmesh-access \
                    
-		   --alb-ingress-access	
+			   --alb-ingress-access	
 
                    
 Delete node group:
 ------------------
 
-eksctl delete nodegroup --cluster=eksdemo \
+	eksctl delete nodegroup --cluster=eksdemo \
                   
-		   --region=ap-south-1 \
+			   --region=ap-south-1 \
 	          
-		 	--name=eksdemo-ng-public	
+			 	--name=eksdemo-ng-public	
 
 
 delete cluster
 --------------
 
-eksctl delete cluster --name=eksdemo \
+	eksctl delete cluster --name=eksdemo \
                  
-		  --region=ap-south-1
+			  --region=ap-south-1
