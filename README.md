@@ -1,6 +1,6 @@
-# EKS-helm-prom-graf
+# EKS installations:
 
-## Eks installations:
+
 
 
 
