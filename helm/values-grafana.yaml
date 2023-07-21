@@ -1,5 +1,0 @@
-adminUser: admin
-adminPassword: your_admin_password
-service:
-  type: NodePort
-  nodePort: 30001  # Choose a suitable port number for NodePort
