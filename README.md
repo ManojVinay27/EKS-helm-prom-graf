@@ -7,22 +7,17 @@ provide IAM role for to access Adminstartion role
 Install Kubectl:
 ----------------
 
-curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
-
-chmod +x kubectl
-
-cp kubectl /usr/bin
-
-kubectl version --short --client
+	curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
+	chmod +x kubectl
+	cp kubectl /usr/bin
+	kubectl version --short --client
 
 EKS install:
 ------------
 
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-
-sudo mv /tmp/eksctl /usr/bin
-
-eksctl version
+	curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+	sudo mv /tmp/eksctl /usr/bin
+	eksctl version
 
 Cluster creation:
 -----------------
