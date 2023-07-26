@@ -15,4 +15,4 @@ Install Grafana:
 
 Expose grafana service:
 -----------------------
-    kubectl expose service grafana — type=NodePort — target-port=3000 — name=grafana-sample
+    kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana-sample
