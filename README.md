@@ -7,10 +7,10 @@ provide IAM role for to access Adminstartion role
 Install Kubectl:
 ----------------
 
-	curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
+	curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.32.0/2024-12-20/bin/linux/amd64/kubectl
 	chmod +x kubectl
 	cp kubectl /usr/bin
-	kubectl version --short --client
+	kubectl version --client
 
 EKS install:
 ------------
@@ -42,12 +42,12 @@ Create cluster node group:
                    --region=ap-south-1 \
                    --name=eksdemo-ng-public \
                    --node-type=t2.medium \
-                   --nodes=2 \
-                   --nodes-min=2 \
-                   --nodes-max=4 \
+                   --nodes=1 \
+                   --nodes-min=1 \
+                   --nodes-max=2 \
                    --node-volume-size=10 \
                    --ssh-access \
-                   --ssh-public-key=new \
+                   --ssh-public-key=RDS \
                    --managed \
                    --asg-access \
                    --external-dns-access \
